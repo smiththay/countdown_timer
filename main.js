@@ -1,19 +1,26 @@
 const finalDate = new Date ("Feb 22, 2021 08:00:00");
 
 timer = function () {
-    const now = new Date();
-    const diff = finalDate - now;
+    const current = new Date();
+    const diff = finalDate - current;
     const message = document.getElementById('display')
-
-    if(diff <= 0){
-        message.textContent = "You Made It";
-    }
-
-
+    const theDay = document.querySelector("#days .box")
+    const theHour = document.querySelector("#hours .box")
+    const theMinutes = document.querySelector("#minutes .box")
+    const theSeconds = document.querySelector("#seconds .box")
+   
     let days = Math.floor(diff/ (86400000))
     let hours = Math.floor(diff %(1000*60*60*24)/(1000*60*60));
     let minutes = Math.floor((diff % (1000*60*60))/(1000*60));
     let seconds = Math.floor((diff % (1000*60))/1000);
+   
+    if(diff <= 0){
+        message.textContent = "It's Time To Fail";
+        days = 0;
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+    }
     
     if(days < 9){
         days = '0' + days
@@ -31,13 +38,13 @@ timer = function () {
         seconds = '0' + seconds 
         }
 
-    document.querySelector("#days .box").textContent= days;
-    document.querySelector("#hours .box").textContent= hours;
-    document.querySelector("#minutes .box").textContent= minutes;
-    document.querySelector("#seconds .box").textContent= seconds;
-
+    
+    theDay.textContent= days;
+    theHour.textContent= hours;
+    theMinutes.textContent= minutes;
+    theSeconds.textContent= seconds;
     
 }
-
+   
 setInterval(timer, 1000)
 timer();
