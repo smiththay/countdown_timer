@@ -1,42 +1,37 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 body{
-    background-color: #ffcdb2;
+    background-color: #a3acff4b;
 
 }
 .center{
     position: absolute;
     top: 50%;
     left: 50%;
-    translate: translate(-50%,-50%);
 }
 #container{
-    max-width: 750px;
-    height: 200px;
+    max-width: 10px;
+    height: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .box{
-    padding: 2rem;
-    margin: 1rem;
-    background-color: #eee;
+    padding: 50px;
+    margin: 10px;
+    background-color: rgba(69, 92, 221, 0.315);
     box-shadow: 0 0 10px #888;
     border-radius: 5px;
     text-align: center;
 }
 #if-expired{
     display: none;
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 .timer{
-    font-size: 4rem;
+    font-size: 60px;
 }
 .caption{
     text-align: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.2rem;
+    font-family:monospace;
+    font-size: 30px;
 }
