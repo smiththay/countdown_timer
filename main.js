@@ -1,11 +1,14 @@
 const finalDate = new Date ("Feb 22, 2021 08:00:00");
-const display = document.getElementById('display')
-
 
 timer = function () {
     const now = new Date();
     const diff = finalDate - now;
-    
+    const message = document.getElementById('display')
+
+    if(diff <= 0){
+        message.textContent = "You Made It";
+    }
+
 
     let days = Math.floor(diff/ (86400000))
     let hours = Math.floor(diff %(1000*60*60*24)/(1000*60*60));
@@ -36,8 +39,5 @@ timer = function () {
     
 }
 
-
-
 setInterval(timer, 1000)
 timer();
-
