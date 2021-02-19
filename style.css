@@ -1,0 +1,41 @@
+body{
+    background-color: #a3acff4b;
+
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#display{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px;
+    padding: 100px;
+}
+#container{
+    align-items: center;
+    max-width: 10px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+   
+}
+.box{
+    padding: 50px;
+    margin: 50px;
+    background-color: rgba(69, 92, 221, 0.315);
+    box-shadow: 0 0 10px #888;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.timer{
+    font-size: 60px;
+}
+.caption{
+    text-align: center;
+    font-family:monospace;
+    font-size: 30px;
+}
